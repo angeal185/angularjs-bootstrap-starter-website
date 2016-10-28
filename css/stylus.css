@@ -4979,5 +4979,8 @@ li a span:hover {
   height: 30px;
   padding: 5px 10px;
 }	
+.main-footer:hover {
+  bottom: 0px;
+}
 	
 	
