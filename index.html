@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link id="thm-a" rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/stylus.css">
+	
+	<script src="js/jQuery-2.2.0.min.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-resource.js"></script> 
+	<script src="js/angular-rout.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.min.js"></script>
+	<script src="js/rout.js"></script>
+	<script src="js/jquery-custom.js"></script>
+	<script src="js/api.js"></script>
+	<script src="js/slimscroll.js"></script>
+	<title>website</title>
+	</head>
+
+<body ng-app="myApp" ng-controller="myCtrl" class="{{sidebarHover}}"  style="min-height 900px">
+	<div class="wrapper">
+	 <div id="top-bar"></div>
+        <header class="main-header">
+            <a ng-href="{{jsv}}" class="logo">
+<span class="logo-mini">{{adm}}</span>
+<span class="logo-lg"><b>{{adm}}</b></span> </a>
+            <nav class="navbar navbar-static-top">
+			
+				<button class="sidebar-toggle c-hamburger c-hamburger--htx" data-toggle="offcanvas" role="button"><span>Toggle navigation</span></button>
+                
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown messages-menu">
+                            <a ng-href="{{jsv}}" data-toggle="tooltip" data-placement="bottom" data-original-title="contact" data-ani-delay="8s"> <i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li class="dropdown notifications-menu">
+                            <a ng-href="{{jsv}}" data-toggle="tooltip" data-placement="bottom" data-original-title="My github" data-ani-delay="8s"> <i class="fa fa-github"></i></span> </a>
+                        </li>
+                        <li class="dropdown tasks-menu">
+                            <a ng-href="{{jsv}}"  data-toggle="tooltip" data-placement="bottom" data-original-title="My codepen" data-ani-delay="8s"> <i class="fa fa-codepen"></i></span> </a>
+                        </li>
+                        <li class="dropdown user user-menu">
+                            <a ng-href="{{jsv}}" class="dropdown-toggle" data-toggle='dropdown'> <img src="assets/img/deus.jpg" class="user-image" alt="User Image "> <span ng-bind="name" class="hidden-xs">{{Nme}}</span> </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header"> <img src="assets/img/deus.jpg" class="img-circle" alt="User Image">
+                                    <p> username: <span ng-bind="name"></span> <small>Member since ...</small> </p>
+                                </li>
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center"> <a ng-href="{{jsv}}">Followers</a> </div>
+                                        <div class="col-xs-4 text-center"> <a ng-href="{{jsv}}">Sales</a> </div>
+                                        <div class="col-xs-4 text-center"> <a ng-href="{{jsv}}">Friends</a> </div>
+                                    </div>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="{{plL}}"> <a ng-href="{{jsv}}" class="btn btn-default btn-flat">Profile</a> </div>
+                                    <div class="{{plR}}"> <a ng-href="{{jsv}}" class="btn btn-default btn-flat">Sign out</a> </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <a ng-href="{{jsv}}" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+		<div id="div1" ng-view class="content-wrapper container" style="min-height:900px;padding:2em">
+	</div>
+        <aside class="main-sidebar">
+            <section class="sidebar" style="height:100%">
+                <div class="user-panel">
+                    <div class="{{plL}} image"> <img id="usr-img" src="assets/img/deus.jpg" class="img-circle" alt="User Image"> </div>
+                    <div class="{{plL}} info"><p>
+                        <span ng-bind="name"></span> </p><a ng-href="{{jsv}}"><i class="fa fa-circle text-success"></i> Online</a> </div>
+                </div>
+               
+                <ul class="sidebar-menu">
+                    <li class="header">MAIN NAVIGATION</li>
+					<li class="active"> <a ng-href="{{jsv}}"><i class="fa fa-fw fa-dashboard"></i><span> Admin panel</span></a> </li>
+					<li class="active"> <a href="#home"><i class="fa fa-fw fa-dashboard"></i><span> Dashboard</span></a> </li>
+					<li class="{{tV}}">
+                        <a ng-href="{{jsv}}"> <i class="{{facdo}}"></i> <span>Portfolio</span> <i class="{{faal}} {{plR}}"></i> </a>
+                        <ul class="{{tvM}}">
+                            <li><a ng-href="#pf1"><i class="{{faco}}"></i> Portfolio 1</a></li>
+                            <li><a ng-href="#pf2"><i class="{{faco}}"></i> Portfolio 2</a></li>
+							<li><a ng-href="#pf3"><i class="{{faco}}"></i> Portfolio 3</a></li>
+							<li><a ng-href="#pf5"><i class="{{faco}}"></i> Portfolio 4</a></li>
+							<li><a ng-href="#pf6"><i class="{{faco}}"></i> Portfolio 5</a></li>
+                        </ul>
+                    </li>
+					<li class="{{tV}}">
+                        <a ng-href="{{jsv}}"> <i class="{{facdo}}"></i> <span>Store</span> <i class="{{faal}} {{plR}}"></i> </a>
+                        <ul class="{{tvM}}">
+                            <li><a ng-href="#sto1"><i class="{{faco}}"></i> Store 1</a></li>
+                            <li><a ng-href="#sto2"><i class="{{faco}}"></i> Store 2</a></li>	
+                        </ul>
+                    </li>
+					<li class="{{tV}}">
+                        <a ng-href="{{jsv}}"> <i class="{{facdo}}"></i> <span>Blog</span> <i class="{{faal}} {{plR}}"></i> </a>
+                        <ul class="{{tvM}}">
+                            <li><a ng-href="#blg1"><i class="{{faco}}"></i> Blog 1</a></li>
+                            <li><a ng-href="#blg2"><i class="{{faco}}"></i> Blog 2</a></li>
+							<li><a ng-href="#blg3"><i class="{{faco}}"></i> Blog 3</a></li>
+                        </ul>
+                    </li>
+					<li class="{{tV}}">
+                        <a ng-href="{{jsv}}"> <i class="{{facdo}}"></i> <span>Pages</span> <i class="{{faal}} {{plR}}"></i> </a>
+                        <ul class="{{tvM}}">
+                            <li><a ng-href="#pag1"><i class="{{faco}}"></i> Faq</a></li>
+                            <li><a ng-href="#pag2"><i class="{{faco}}"></i> 404</a></li>
+							<li><a ng-href="#pag3"><i class="{{faco}}"></i> Sitemap</a></li>
+							<li><a ng-href="#pag4"><i class="{{faco}}"></i> About</a></li>
+							<li><a ng-href="#pag5"><i class="{{faco}}"></i> Features</a></li>
+							<li><a ng-href="#pag6"><i class="{{faco}}"></i> Contact</a></li>
+							<li><a ng-href="#pag7"><i class="{{faco}}"></i> Services</a></li>
+							<li><a ng-href="#pag8"><i class="{{faco}}"></i> Round images</a></li>
+							<li><a ng-href="#pag9"><i class="{{faco}}"></i> Gallery</a></li>
+							<li><a ng-href="#pag10"><i class="{{faco}}"></i> Business</a></li>
+							<li><a ng-href="#pag11"><i class="{{faco}}"></i> Business 2</a></li>
+							<li><a ng-href="#pag12"><i class="{{faco}}"></i> Forms</a></li>
+							<li><a ng-href="#pag13"><i class="{{faco}}"></i> Bootstrap components</a></li>
+							<li><a ng-href="#fntA"><i class="{{faco}}"></i> Font awesome</a></li>
+							<li><a ng-href="#glphA"><i class="{{faco}}"></i> Glyphicons</a></li>
+							<li><a ng-href="#thmA"><i class="{{faco}}"></i> Themes</a></li>
+							<li><a ng-href="#indxB"><i class="{{faco}}"></i> main</a></li>
+							<li><a ng-href="#indxC"><i class="{{faco}}"></i> Google maps</a></li>
+                        </ul>
+                    </li>
+                    <li class="header">LABELS</li>
+                    <li><a id="" ng-href="{{jsv}}"><i class="{{faco}} text-red"></i> <span>Important</span></a></li>
+                    <li><a id="" ng-href="{{jsv}}"><i class="{{faco}} text-yellow"></i> <span>Warning</span></a></li>
+                    <li><a id="" ng-href="{{jsv}}"><i class="{{faco}} text-aqua"></i> <span>Information</span></a></li>
+					
+                    
+                </ul>
+            </section>
+        </aside>
+        
+        
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                
+                <li><a class="active" ng-href="{{jsv}}" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                
+                <div id="control-sidebar-theme-demo-options-tab" class="tab-pane active">
+					<div class="form-group">
+						<form name="form">
+							<label>Enter display name: <input type="text" name="input" ng-maxlength="16" ng-model="name"></label><br>
+							Maxlength: 16 characters<br>
+							Input valid? = <code> {{form.input.$valid}}</code>
+						</form>
+					</div>
+					<h4 >Search</h4>
+					<div class="form-group">
+						 <div ng-app="mysrch" ng-controller="myCtrl2 as vm">
+							<input id="inp-l" name="input" type="text" placeholder="Search..."  ng-model="vm.searchValue" />
+							<ul class="search-items">
+							<li ng-repeat="item in vm.searchData | filter:vm.searchValue" class="search-item"><a href="{{ item }}">{{ item }}</a></li>
+							</ul>
+						</div> 
+					</div>                   
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+               
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div  id="control-sidebar-settings-tab">
+                    
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+<div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+<div class="social" style="position:fixed">
+<div class="social__ico" style="text-align:center; padding-top:9px"><i class="fa fa-cog"></i></div>
+<div class="social__cont">
+  <div class="social__group col-md-12">
+	<div class="social__label" style="text-align: center">Themes</div>
+	<div class="social__block">
+	  <div class="col-md-3"><a id="{{thm1}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm1}}<img ng-src="{{botsw}}cerulean/thumbnail.png" class="{{imgRes}}"></a></div>
+	  <div class="col-md-3"><a id="{{thm2}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm2}}<img class="{{imgRes}}" ng-src="{{botsw}}cosmo/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm3}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm3}}<img class="{{imgRes}}" ng-src="{{botsw}}cyborg/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm4}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm4}}<img class="{{imgRes}}" ng-src="{{botsw}}darkly/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm5}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm5}}<img class="{{imgRes}}" ng-src="{{botsw}}flatly/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm6}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm6}}<img class="{{imgRes}}" ng-src="{{botsw}}journal/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm7}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm7}}<img class="{{imgRes}}" ng-src="{{botsw}}lumen/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm8}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm8}}<img class="{{imgRes}}" ng-src="{{botsw}}paper/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm9}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm9}}<img class="{{imgRes}}" ng-src="{{botsw}}readable/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm10}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm10}}<img class="{{imgRes}}"ng-src="{{botsw}}sandstone/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm13}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm13}}<img class="{{imgRes}}" ng-src="{{botsw}}spacelab/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm14}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm14}}<img class="{{imgRes}}" ng-src="{{botsw}}superhero/thumbnail.png"></a></div>
+	  <div class="col-md-3"><a id="{{thm15}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm15}}<img class="{{imgRes}}" ng-src="{{botsw}}united/thumbnail.png" ></a></div>
+	  <div class="col-md-3"><a id="{{thm16}}" ng-href="{{jsv}}" class="{{plR}} mg-1">{{thm16}}<img class="{{imgRes}}" ng-src="{{botsw}}yeti/thumbnail.png" ></a></div>
+	</div>
+  </div>
+</div>
+</div>
+	<a href="#" class="scrollToTop"></a>
+	<footer class="main-footer">
+            <strong>Copyright © 2016 <a ng-href="{{jsv}}">Ben Eaves</a>.</strong> All rights reserved. </footer>
+    </div>
+</body>
+</html>
